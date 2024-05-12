@@ -1,11 +1,12 @@
 import React from "react";
 
-export default function Sor(){
+export default function Sor({adat}){
     return(
         <tr>
-        <td></td>
-        <td></td>
-        <td></td>
+        <td>{adat.id}</td>
+        <td>{adat.tevekenyseg_nev}</td>
+        <td>{adat.osztaly_nev}</td>
+        {adat.allapot === "0" ? <td>nincs elfogadva</td>: <td>elfogadva</td>}
         </tr>
     )
 }
